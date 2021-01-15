@@ -15,3 +15,13 @@ pm_10 = response['response']['body']['items'][1]['pm10Value']
 station_name = response['response']['body']['items'][1]['stationName']
 
 print(f'{sido_name}의 미세먼지 농도는 {pm_10}입니다. ( 측성소 : {station_name})')
+
+# 텔레그램 메세지 전송
+
+token = token = '1516249307:AAHVIGT52mHDQuP-bo6bDgfPK5QP-7mVKv8'
+chat_id = '1536127633'
+
+
+telegram_url = f'https://api.telegram.org/bot/sendMessage?chat_id={chat_id}&text={text}'
+
+requests.get(telegram_url)
